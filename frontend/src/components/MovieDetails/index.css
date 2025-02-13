@@ -1,0 +1,137 @@
+.movie-details-container{
+    background-color: rgb(44, 43, 43);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+}
+.movie-details{
+    display: flex;
+    width:90vw;
+    background-color: rgb(29, 29, 31);
+    border-radius:8px;
+    height:60vh;
+    margin:20px;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+.movie-details-left-container{
+    display: flex;
+    flex-direction: column;
+   padding:20px;
+}
+@media screen and (min-width:768px){
+    .movie-details-left-container{
+        width:40vw;
+        height: 50vh;
+    }
+}
+.poster{
+    width:200px;
+    height: 240px;
+}
+@media screen and (min-width:768px){
+    .poster{
+        width:140px;
+        height:180px;
+        border-radius:12px;
+    }
+}
+.text-content{
+    margin-left:20px;
+}
+@media screen and (min-width:768px){
+    .text-content{
+        margin-left: 10px;
+    }
+}
+.top-content{
+    display: flex;
+}
+.movie-details-title{
+    font-family: 'Roboto';
+    font-size:12px;
+    color:white;
+    font-weight: 600;
+}
+.movie-details-rating{
+    font-family: 'Roboto';
+    font-size:12px;
+    color:white;
+    font-weight: 600;
+}
+.movie-details-genres{
+    font-family: 'Roboto';
+    font-size:12px;
+    color:white;
+    font-weight: 600;
+}
+.movie-details-release-date{
+    font-family: 'Roboto';
+    font-size:12px;
+    color:white;
+    font-weight: 600;
+}
+.movie-details-overview{
+    font-family: 'Roboto';
+    font-size:20px;
+    color:white;
+    font-weight: 600;
+    margin-bottom:0px;
+}
+.movie-details-overview-para{
+    font-family: 'Roboto';
+    font-size:12px;
+    color:white;
+}
+.banner-image{
+    display: none;
+}
+@media screen and (min-width:768px){
+    .banner-image{
+        width:50vw;
+        height:60vh;
+        border-radius: 8px;
+        display: inline-block;
+    }
+}
+.cast-heading{
+    font-family: 'Roboto';
+    font-size:20px;
+    color:white;    
+}
+.cast-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
+
+.slick-slider {
+    width: 100%;
+  }
+.actor-list-item{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin-bottom:10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.cast-image{
+    width:120px;
+    height: 160px;
+    border-radius: 6px;
+}
+.cast-name{
+    font-family: 'Roboto';
+    font-size:10px;
+    color:white;
+    margin-bottom: 0px;
+}
+.cast-character{
+    font-family: 'Roboto';
+    font-size:10px;
+    color:white;
+}
