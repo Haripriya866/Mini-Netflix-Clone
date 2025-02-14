@@ -1,6 +1,6 @@
 .movie-details-container{
     background-color: rgb(44, 43, 43);
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     padding:20px;
@@ -13,8 +13,10 @@
     height:60vh;
     margin:20px;
     margin:auto;
-    margin-top:20px;
-    margin-bottom: 20px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    max-height:420px;
+
 }
 .movie-details-left-container{
     display: flex;
@@ -91,7 +93,7 @@
 @media screen and (min-width:768px){
     .banner-image{
         width:50vw;
-        height:60vh;
+        max-height:420px;
         border-radius: 8px;
         display: inline-block;
     }
@@ -100,14 +102,16 @@
     font-family: 'Roboto';
     font-size:20px;
     color:white;    
+    margin-bottom: 0px;
+   
 }
 .cast-container{
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     margin: auto;
+    margin-top: 0px;
 }
-
 .slick-slider {
     width: 100%;
   }
@@ -115,7 +119,6 @@
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    margin-bottom:10px;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -124,6 +127,7 @@
     height: 160px;
     border-radius: 6px;
 }
+
 .cast-name{
     font-family: 'Roboto';
     font-size:10px;
@@ -133,5 +137,5 @@
 .cast-character{
     font-family: 'Roboto';
     font-size:10px;
-    color:white;
+    color:white; 
 }

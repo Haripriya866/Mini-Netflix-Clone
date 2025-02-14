@@ -1,11 +1,8 @@
 .home-container{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     background-color: rgb(41, 40, 40);
     min-height:100vh;
-    /* margin:auto; */
-    /* width:100%; */
 }
 .failure-container{
     display: flex;
@@ -21,15 +18,14 @@
     display: flex;
     justify-content: center;
 }
-.success-container{
-    background-color: rgb(37, 37, 37);
+ .success-container{
     display: flex;
-    flex-direction: column;
-    margin-top:40px;
-}
-@media screen and (min-width:768px){
-    .success-container{
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-}
+    flex-wrap: wrap;
+    width: 80%;
+    height:70vh;
+    margin: auto;
+    margin-top: 50px;
+ }
+ .slick-slider {
+    width: 100%;
+  }

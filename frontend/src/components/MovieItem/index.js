@@ -6,7 +6,7 @@ const MovieItem = (props) => {
   const { movieDetails } = props;
   const { posterPath, title, voteAverage, id } = movieDetails;
   return (
-    <li className="movie-list-item">
+    <div className="movie-list-item">
       <Link to={`/movie/${id}`} className='movie-details-link'>
         <img
           src={`https://image.tmdb.org/t/p/w500${posterPath}`}
@@ -16,7 +16,7 @@ const MovieItem = (props) => {
         <h1 className="movie-title">{title}</h1>
         <p className="movie-rating">Rating: {voteAverage}</p>
       </Link>
-    </li>
+    </div>
   );
 };
 export default MovieItem;

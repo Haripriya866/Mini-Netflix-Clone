@@ -2,12 +2,36 @@ import { Component } from "react";
 import Loader from "react-loader-spinner";
 
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import "./index.css";
 import MovieItem from "../MovieItem";
 import Header from "../Header";
 import HeaderContext from "../../context/HeaderContext";
-import { API_OPTIONS } from "../../api"; 
+import { API_OPTIONS } from "../../api";
+
+const settings = {
+  dots: false,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 768, // Devices below 768px width
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 1024, // Optional: Adjust for tablet sizes if needed
+      settings: {
+        slidesToShow: 4,
+      },
+    },
+  ],
+};
 
 const apiStatusConstants = {
   initial: "INITIAL",
@@ -106,16 +130,17 @@ class Home extends Component {
     );
   };
 
-  
   renderSuccessView = () => {
     const { moviesList } = this.state;
 
     return (
-      <ul className="success-container">
-        {moviesList.map((eachMovie) => (
-          <MovieItem key={eachMovie.id} movieDetails={eachMovie} />
-        ))}
-      </ul>
+      <div className="success-container">
+        <Slider {...settings}>
+          {moviesList.map((eachMovie) => (
+            <MovieItem key={eachMovie.id} movieDetails={eachMovie} />
+          ))}
+        </Slider>
+      </div>
     );
   };
 
@@ -148,7 +173,7 @@ class Home extends Component {
   };
 
   render() {
-    const { searchInput, activeOptionId} = this.state;
+    const { searchInput, activeOptionId } = this.state;
     return (
       <>
         <div className="home-container">
@@ -165,7 +190,7 @@ class Home extends Component {
             <Header />
             {this.renderView()}
           </HeaderContext.Provider>
-        </div>  
+        </div>
       </>
     );
   }

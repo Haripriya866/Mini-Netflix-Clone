@@ -11,7 +11,7 @@ import { API_OPTIONS } from "../../api";
 
 const settings = {
   dots: false,
-  slidesToShow: 5,
+  slidesToShow: 4,
   slidesToScroll: 1,
   responsive:[
     {
