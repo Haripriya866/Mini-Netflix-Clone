@@ -10,7 +10,9 @@ import "slick-carousel/slick/slick-theme.css";
 import "./index.css";
 import MovieItem from "../MovieItem";
 import Header from "../Header";
+
 import HeaderContext from "../../context/HeaderContext";
+
 import { API_OPTIONS } from "../../api";
 
 const settings = {
